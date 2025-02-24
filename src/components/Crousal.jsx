@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import img from '../assets/carousal.jpg'
 
-const Hero = () => {
+const Hero = ({openModal}) => {
   const slides = [
     {
       id: 1,
@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black h-[38%] mt-[375px] w-[90%] mx-auto bg-opacity-50  flex flex-col items-center justify-center text-center px-6">
               <h2 className="text-4xl font-bold mb-4 sm:text-3xl">{slide.title}</h2>
               <p className="mt-2 max-w-2xl text-lg sm:text-base">{slide.text}</p>
-              <Link to="/about" className="mt-6 px-6 py-3 border-2 w-40 border-green-500 rounded-sm text-white font-semibold hover:bg-green-500 transition duration-700">Read More</Link>
+              <Link onClick={()=>openModal()} className="mt-6 px-6 py-3 border-2 w-40 border-green-500 rounded-sm text-white font-semibold hover:bg-green-500 transition duration-700">Open</Link>
             </div>
           </div>
         ))}
