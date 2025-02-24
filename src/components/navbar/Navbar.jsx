@@ -43,8 +43,11 @@ const Header = () => {
                             { name: "Contact", path: "/contact" }
                         ].map((item, index) => (
                             <li key={index} className="relative">
-                                <Link to={item.path} className="text-gray-700 hover:text-green-500 block py-2 transition-all duration-100 group">
-                                    <span className="relative inline-block group-hover:translate-y-1 transition-all duration-300">{item.name}</span>
+                                <Link to={item.path}
+                                    className="text-gray-700 hover:text-green-500 block py-2 transition-all duration-100 group">
+                                    <span className="relative inline-block hover:scale-94 transition-transform duration-200 group-hover:translate-y-1">
+                                        {item.name}
+                                    </span>
                                 </Link>
                             </li>
                         ))}

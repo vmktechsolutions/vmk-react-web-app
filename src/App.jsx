@@ -7,6 +7,7 @@ import Portfolio from './components/portfolio/Portfolio.jsx'
 import Pricing from './components/pricing/Pricing.jsx'
 import Blog from './components/blog/Blog.jsx'
 import Contactus from './components/contact/Contactus.jsx'
+import ContactUs from './components/touch/ContactUs.jsx';
 
 const App = () => {
   return (
@@ -21,12 +22,10 @@ const App = () => {
           <Route path='/pricing' element={<Pricing />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/contact' element={<Contactus />} />
+          <Route path='/touch' element={<ContactUs />} />
         </Routes>
 
       </HashRouter>
-
-
-
 
     </div>
   )
