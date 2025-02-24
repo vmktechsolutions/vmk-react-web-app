@@ -6,13 +6,14 @@ import About from "../About.jsx";
 import Services from "../Services.jsx";
 import Portfolio from "../Portfolio.jsx";
 import Clients from "../Clients.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import Img from '../../assets/bg.jpg';
 
 const Home = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [modalShown, setModalShown] = useState(false);
 
     // Function to open modal with animation delay
     const openModal = () => {
@@ -25,6 +26,19 @@ const Home = () => {
         setIsAnimating(false);
         setTimeout(() => setIsModalOpen(false), 300);
     };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!modalShown) {
+                openModal();
+                setModalShown(true); // Mark modal as shown
+                window.removeEventListener("scroll", handleScroll); // Remove listener after showing modal once
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll); // Cleanup listener
+    }, [modalShown]);
 
     const handleChange = () => {
 

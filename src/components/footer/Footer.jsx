@@ -14,7 +14,7 @@ const Footer = () => {
                         <Link to="/" className="text-2xl font-bold text-white">Company</Link>
                         <div className="mt-4 text-gray-400">
                             <p className={sty}>VMK Tech Solutions</p>
-                            <p className={sty}>India, Noida sec - 62</p>
+                            <p className={sty}>India, Noida sec - 62, ICONIC</p>
                             <p className={sty}><strong>Phone:</strong> +91 95571-10400</p>
                             <p className={sty}><strong>Email:</strong> karuna@vmktechsolutions.com</p>
                         </div>
