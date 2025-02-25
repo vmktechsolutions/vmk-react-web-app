@@ -45,7 +45,7 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div >
             {/* Pass openModal function to Crousal component */}
             <Crousal openModal={openModal} />
 

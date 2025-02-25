@@ -19,7 +19,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`fixed top-0 left-0 w-full shadow-lg transition-all z-50 ${scrolled ? "bg-white shadow-lg py-3" : "bg-transparent"}`}>
+        <header className="fixed top-5 left-5 mx-auto shadow-lg transition-all z-50 bg-white py-3 w-[80%] rounded-2xl">
             <div className="container mx-auto flex items-center justify-between px-6">
                 <Link to="/" className="flex items-center text-2xl font-bold uppercase">
                     <img src={logo} className="h-20 transition-all duration-300 ${scrolled ? 'h-10' : 'h-12' }" alt="Logo" />
