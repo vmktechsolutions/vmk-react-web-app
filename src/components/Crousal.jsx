@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import img from '../assets/carousal.jpg'
+import img from '../assets/web.png'
 
 const Hero = ({openModal}) => {
   const slides = [
