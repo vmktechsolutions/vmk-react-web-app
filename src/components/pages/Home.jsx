@@ -45,8 +45,9 @@ const Home = () => {
     }
 
     return (
-        <div >
+        <div className="flex flex-col">
             {/* Pass openModal function to Crousal component */}
+            <Navbar />
             <Crousal openModal={openModal} />
 
             {/* Modal */}
@@ -96,8 +97,6 @@ const Home = () => {
                     </div>
                 </div>
             )}
-
-            <Navbar />
             <About />
             <Services />
             <Portfolio />

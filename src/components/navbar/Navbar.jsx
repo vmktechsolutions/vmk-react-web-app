@@ -12,14 +12,15 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > 100);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <header className="fixed top-5 left-5 mx-auto shadow-lg transition-all z-50 bg-white py-3 w-[80%] rounded-2xl">
+        <header className="fixed left-1/2 transform -translate-x-1/2 flex place-items-center mx-auto shadow-lg transition-all   z-50 bg-white py-3 w-full sm:w-[80%] rounded-2xl top-0 sm:top-5">
+
             <div className="container mx-auto flex items-center justify-between px-6">
                 <Link to="/" className="flex items-center text-2xl font-bold uppercase">
                     <img src={logo} className="h-20 transition-all duration-300 ${scrolled ? 'h-10' : 'h-12' }" alt="Logo" />
@@ -28,11 +29,11 @@ const Header = () => {
                 {/* Mobile Navigation Overlay */}
                 <div className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity ${mobileNavActive ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={toggleMobileNav}></div>
 
-                <nav className={`fixed top-0 left-0 h-full w-64 bg-white shadow-xl transform ${mobileNavActive ? "translate-x-0" : "-translate-x-full"} transition-transform md:relative md:flex md:w-auto md:translate-x-0 md:shadow-none z-50`}>
+                <nav className={`fixed top-0 left-0 h-full sm:w-64 w-full bg-white shadow-xl transform ${mobileNavActive ? "translate-x-0" : "-translate-x-full"} transition-transform md:relative md:flex md:w-auto md:translate-x-0 md:shadow-none z-50`}>
                     <button onClick={toggleMobileNav} className="absolute top-5 right-5 text-2xl text-gray-700 md:hidden">
                         <BiX />
                     </button>
-                    <ul className="flex flex-col md:flex-row md:space-x-10 mt-16 md:mt-0 p-5 md:p-0">
+                    <ul className="flex flex-col md:flex-row md:space-x-10 mt-16 md:mt-0 p-5 md:p-0  bg-white sm:bg-none">
                         {[
                             { name: "Home", path: "/" },
                             { name: "About", path: "/about" },
